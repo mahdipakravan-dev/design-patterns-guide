@@ -1,7 +1,7 @@
-import { User } from "./ConfirmationMailMailer";
 import { Message } from "./Message";
 import { TemplatingEngineInterface } from "./TemplatingEngine";
 import { TranslatorInterface } from "./Translator";
+import { User } from "./User";
 
 export class ConfirmationMailFactory {
     private templating:TemplatingEngineInterface ;

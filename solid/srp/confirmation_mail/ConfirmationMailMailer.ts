@@ -1,16 +1,9 @@
+import { TemplatingEngineInterface } from "./TemplatingEngine";
 import { ConfirmationMailFactory } from "./ConfirmationMailFactory";
 import { MailerInterface } from "./Mailer";
 import { Message } from "./Message";
-
-export class User {
-    public getConfirmCode() : string {
-        return Math.floor(Math.random() * 10).toString()
-    }
-
-    public getEmailAddress() : string {
-        return "Mahdi@gmail.com"
-    }
-}
+import { TranslatorInterface } from "./Translator";
+import { User } from "./User";
 
 class ConfirmationMailMailer {
     private confirmationMailFactory : ConfirmationMailFactory;
@@ -33,8 +26,20 @@ class ConfirmationMailMailer {
         this.sendMessage(message);
     }
 
-    public sendMessage(message : Message) {
+    private sendMessage(message : Message) {
         this.mailer.send(message)
     }
 
 };
+
+const confirmationMailFactory = new ConfirmationMailFactory(
+    new TemplatingEngineInterface(),
+    new TranslatorInterface()
+);
+const mailer = new MailerInterface();
+const confirmationMailer = new ConfirmationMailMailer(
+    confirmationMailFactory,
+    mailer
+);
+
+confirmationMailer.sendTo(new User());
