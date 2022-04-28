@@ -36,10 +36,10 @@ const confirmationMailFactory = new ConfirmationMailFactory(
     new TemplatingEngineInterface(),
     new TranslatorInterface()
 );
-const mailer = new MailerInterface();
+const fara_email_instance = new MailerInterface("fara-email");
 const confirmationMailer = new ConfirmationMailMailer(
     confirmationMailFactory,
-    mailer
+    fara_email_instance
 );
-
-confirmationMailer.sendTo(new User());
+const user = new User();
+confirmationMailer.sendTo(user);
