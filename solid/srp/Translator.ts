@@ -1,5 +1,5 @@
 export class TranslatorInterface {
-    private translate(text : string) {
+    translate(text : string) {
         return text;
     };
 }

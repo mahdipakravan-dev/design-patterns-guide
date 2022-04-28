@@ -1,6 +1,6 @@
-import { MailerInterface } from "./mailerInterface";
-import { TemplatingEngineInterface } from "./TemplatingEngineInterface";
-import { TranslatorInterface } from "./translatorInterface";
+import { ConfirmationMailFactory } from "./ConfirmationMailFactory";
+import { MailerInterface } from "./Mailer";
+import { Message } from "./Message";
 
 export class User {
     public getConfirmCode() : string {
@@ -11,45 +11,21 @@ export class User {
         return "Mahdi@gmail.com"
     }
 }
-export class Message {
-    private subject:string;
-    private body:string;
-    private emailAddress:string;
-
-    constructor(
-        subject,
-        body,
-        emailAddress
-    ){
-        this.subject = subject;
-        this.body = body;
-        this.emailAddress = emailAddress;
-    }
-}
 
 class ConfirmationMailMailer {
-    private templating : TemplatingEngineInterface;
-    private translator : TranslatorInterface;
+    private confirmationMailFactory : ConfirmationMailFactory;
     private mailer : MailerInterface;
 
     constructor(
-        templating : TemplatingEngineInterface,
-        translator : TranslatorInterface,
+        confirmationMailFactory : ConfirmationMailFactory,
         mailer : MailerInterface
     ){
-        this.templating = templating;
-        this.translator = translator;
+        this.confirmationMailFactory = confirmationMailFactory;
         this.mailer = mailer;
     }
 
     private createMesssageFor(user : User) : Message {
-        const subject = this.translator.translate("Please Confirm Your Email Address");
-        const body = this.templating.render("mail.confirm" , [
-            "Hello Sir." , 
-            "Thanks For Your Signup !", 
-            `Your Code is ${user.getConfirmCode()}`,
-            "Regards♥"]);
-        return new Message(subject,body,user.getEmailAddress())
+        return this.confirmationMailFactory.createMessageFor(user);    
     }
 
     public sendTo(user : User){
@@ -61,4 +37,4 @@ class ConfirmationMailMailer {
         this.mailer.send(message)
     }
 
-}
+};
