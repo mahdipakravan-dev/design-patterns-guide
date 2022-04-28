@@ -1,19 +1,14 @@
-import JsonEncoder from "./JsonEncoder";
-import XmlEncoder from "./XmlEncoder";
+import { EncoderFactory } from "./EncoderFactory";
 
 class GenericEncoder {
-    encode(data:string , format : "json"|"xml") {
-        let encoder;
-        if(format === "json") {
-            encoder = new JsonEncoder()
-        }    
-        if(format === "xml") {
-            encoder = new XmlEncoder()
-        } else {
-            throw new Error("Unhandled Format")
-        }
-        return encoder.encode(data);
+    constructor(
+        private encoderFactory : EncoderFactory
+    ){}
+
+    encoder(data : string , format : "XML"|"JSON") : string{
+        return this.encoderFactory.createEncoder(format).encoder(data);
     }
 }
 
-new GenericEncoder().encode("MyData" , "json");
+const encoder = new EncoderFactory();
+new GenericEncoder(encoder).encoder("My Data" , "JSON")

@@ -1,5 +1,7 @@
-export default class JsonEncoder {
-    encode(data : string) : string {
+import { EncoderInterface } from "./EncoderInterface";
+
+export default class JsonEncoder implements EncoderInterface {
+    encoder(data : string) : string {
         return data + "/JSONEncode"
     }
 }
