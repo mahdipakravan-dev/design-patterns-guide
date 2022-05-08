@@ -16,7 +16,11 @@ export class LocalFile implements FileInterface {
     download(): void {
     }
 
-    move(): void {
+    /* TODO
+    *   @Problem
+    *       You Cant Change return types in subClass
+    *  */
+    move(): string {
     }
 
     rename(): void {
