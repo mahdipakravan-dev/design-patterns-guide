@@ -2,8 +2,16 @@ import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import "./app.css"
+import {PIZZA_NAMES} from "./libs/data";
+import {PizzaStore, PizzaTypes} from "./libs/PizzaStore";
 
 const App = () => {
+
+    const onClickPizza = (type : PizzaTypes) => {
+        const pizzaStore = new PizzaStore();
+        pizzaStore.orderPizza(type);
+    }
+
   return (
     <div className={"container"}>
       <h1>Welcome To Pizza🍕 Shop !</h1>
@@ -27,9 +35,11 @@ const App = () => {
               <h5>Select Your Pizza : </h5>
 
               <div className={"products"}>
-                  {Array.from("123456789").map(() => <article className={"product"}>
-                      🍕 PizzaName 🍕
-                  </article>)}
+                  {PIZZA_NAMES.map((pizzaName) =>
+                      <article className={"product"} onClick={() => onClickPizza(pizzaName as PizzaTypes)}>
+                        🍕 {pizzaName} 🍕
+                      </article>
+                  )}
               </div>
           </div>
       </div>
