@@ -4,8 +4,6 @@
     <br/><u>but</u> <b>subclasses to alter the type of objects that will be created</b>.
 </p>
 
-[comment]: <> (![]image-1.png)
-
 <h2>❌الان این مشکل رو داریم❌</h2>
 میخوایم توی سوپر کلاسمون یک پیتزا بسازیم و اونطور که میبینید کلی کد رو ریختیم توی فانکشن زیر
 ![](image-0.png)
@@ -16,12 +14,6 @@
 <br/>
 گفتم تقریبا چون به یک مرحله خیلی بهتری میرسیم ولی فعلا در همین حد تو ذهنتون بمونه
 ![](image-4.png)
-
-
-<p>به سه بخش تقسیم میشه</p>
-<h6>1- SuperClass Or Client (PizzaStore)</h6>
-<h6>2- Object (Pizza)</h6>
-<h6>3- Types of Object (VeggiePizza)</h6>
 
 <hr/>
 <h2>چطوری پیاده سازی کنیم ؟</h2>
@@ -79,3 +71,7 @@
 
 <h1>تمام !</h1>
 <h2>پاشیم بریم کد بزنیم !</h2>
+
+* Example 1 : Pizza Factory
+* Example 2 : Message Publisher Factory
+* Example 3 : Duck Factory
