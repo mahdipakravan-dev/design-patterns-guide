@@ -4,7 +4,7 @@
     <br/><u>but</u> <b>subclasses to alter the type of objects that will be created</b>.
 </p>
 
-[comment]: <> (![]&#40;image-1.png&#41;)
+[comment]: <> (![]image-1.png)
 
 <h2>❌الان این مشکل رو داریم❌</h2>
 میخوایم توی سوپر کلاسمون یک پیتزا بسازیم و اونطور که میبینید کلی کد رو ریختیم توی فانکشن زیر
