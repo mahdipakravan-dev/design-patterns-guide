@@ -1,9 +1,4 @@
-import {Pizza} from "./pizza.type";
-import {PeperoniPizza} from "./PeperoniPizza";
-import {VeganPizza} from "./VeganPizza";
-import {SpecialPizza} from "./SpecialPizza";
-import {BakenPizza} from "./BakenPizza";
-import {MashromPizza} from "./MoshroomPizza";
+import {PizzaFactoryInterface} from "./PizzaFactory.type";
 
 export type PizzaTypes = "peperoni" |
     "vegen" |
@@ -11,36 +6,17 @@ export type PizzaTypes = "peperoni" |
     "baken" |
     "moshrom";
 export class PizzaStore {
-    orderPizza(type : PizzaTypes) {
-        let pizza : Pizza;
-        switch (type) {
-            case "peperoni" : {
-                pizza = new PeperoniPizza();
-                break;
-            }
-            case "vegen" : {
-                pizza = new VeganPizza();
-                break;
-            }
-            case "special" : {
-                pizza = new SpecialPizza();
-                break;
-            }
-            case "baken" : {
-                pizza = new BakenPizza();
-                break;
-            }
-            case "moshrom" : {
-                pizza = new  MashromPizza();
-                break;
-            }
-        }
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
 
-        console.log("✅ Your Pizza is Reay !")
+    constructor(private pizzaFactory : PizzaFactoryInterface) {}
+
+    orderPizza(type : PizzaTypes) {
+        const pizza = this.pizzaFactory.makePizza(type);
+        pizza.prepare()
+            .bake()
+            .cut()
+            .box();
+
+        console.log("✅ Your Pizza is Ready !")
         return pizza;
     }
 }

@@ -4,11 +4,13 @@ import * as ReactDOM from 'react-dom';
 import "./app.css"
 import {PIZZA_NAMES} from "./libs/data";
 import {PizzaStore, PizzaTypes} from "./libs/PizzaStore";
+import {NewYourkPizzaFactory} from "./libs/PizzaFactory";
 
 const App = () => {
 
     const onClickPizza = (type : PizzaTypes) => {
-        const pizzaStore = new PizzaStore();
+        const shop = new NewYourkPizzaFactory();
+        const pizzaStore = new PizzaStore(shop);
         pizzaStore.orderPizza(type);
     }
 
