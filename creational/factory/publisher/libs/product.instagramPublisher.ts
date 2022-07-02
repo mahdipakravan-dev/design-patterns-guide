@@ -1,3 +1,5 @@
+import {MessageInterface} from "./message.types";
+
 export class ProductInstagramPublisher implements ProductType {
     publish(message: MessageInterface): ProductType {
         //TODO Send Message To Linkedin Server
