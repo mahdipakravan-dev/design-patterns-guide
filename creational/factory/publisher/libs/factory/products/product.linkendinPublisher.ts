@@ -1,4 +1,5 @@
-import {MessageInterface} from "./message.types";
+import {MessageInterface} from "../interfaces/message.types";
+import {ProductType} from "../interfaces/product.type";
 
 export class ProductLinkendinPublisher implements ProductType {
     publish(message: MessageInterface): ProductType {

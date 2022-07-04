@@ -1,5 +1,6 @@
-import {MessagePublisherInterface} from "./creator.types";
-import {ProductInstagramPublisher} from "./product.instagramPublisher";
+import {MessagePublisherInterface} from "../interfaces/creator.types";
+import {ProductInstagramPublisher} from "../products/product.instagramPublisher";
+import {ProductType} from "../interfaces/product.type";
 
 export class InstagramPublisherFactory extends MessagePublisherInterface {
     _desc = "This is Instagram Publisher";

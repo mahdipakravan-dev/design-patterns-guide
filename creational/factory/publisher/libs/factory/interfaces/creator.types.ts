@@ -1,5 +1,6 @@
 //This is CREATOR
 import {MessageInterface} from "./message.types";
+import {ProductType} from "./product.type";
 
 export abstract class MessagePublisherInterface {
     abstract _title : string
