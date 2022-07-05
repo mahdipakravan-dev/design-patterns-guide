@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --border: #fff;
+    --text : #fff;
+    --hover : rgb(2,0,36)
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 80%;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(60deg, rgba(20,0,36,1) 0%, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 100%);
+    /*background: */
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--text);
+}
