@@ -1,11 +1,11 @@
-import {PizzaTypes} from "./PizzaStore";
-import {Pizza} from "./pizza.type";
-import {PeperoniPizza} from "./PeperoniPizza";
-import {VeganPizza} from "./VeganPizza";
-import {SpecialPizza} from "./SpecialPizza";
-import {BakenPizza} from "./BakenPizza";
-import {MashromPizza} from "./MoshroomPizza";
-import {PizzaFactoryInterface} from "./PizzaFactory.type";
+import {PizzaTypes} from "../../PizzaStore";
+import {Pizza} from "../interfaces/pizza.type";
+import {PeperoniPizza} from "../products/PeperoniPizza";
+import {VeganPizza} from "../products/VeganPizza";
+import {SpecialPizza} from "../products/SpecialPizza";
+import {BakenPizza} from "../products/BakenPizza";
+import {MashromPizza} from "../products/MoshroomPizza";
+import {PizzaFactoryInterface} from "../interfaces/PizzaFactory.type";
 
 export class NewYourkPizzaFactory implements PizzaFactoryInterface{
     makePizza(type : PizzaTypes) : Pizza {
@@ -32,6 +32,10 @@ export class NewYourkPizzaFactory implements PizzaFactoryInterface{
                     break;
                 }
             }
+            pizza.prepare();
+            pizza.bake();
+            pizza.cut();
+            pizza.box();
             return pizza
     }
 }

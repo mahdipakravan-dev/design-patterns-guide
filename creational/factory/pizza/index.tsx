@@ -2,9 +2,9 @@ import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import "./app.css"
-import {PIZZA_NAMES} from "./libs/data";
+import {PIZZA_NAMES} from "./libs/factory/interfaces/data";
 import {PizzaStore, PizzaTypes} from "./libs/PizzaStore";
-import {NewYourkPizzaFactory} from "./libs/PizzaFactory";
+import {NewYourkPizzaFactory} from "./libs/factory/factories/PizzaFactory";
 
 const App = () => {
 

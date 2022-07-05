@@ -1,4 +1,4 @@
-import {PizzaFactoryInterface} from "./PizzaFactory.type";
+import {PizzaFactoryInterface} from "./factory/interfaces/PizzaFactory.type";
 
 export type PizzaTypes = "peperoni" |
     "vegen" |

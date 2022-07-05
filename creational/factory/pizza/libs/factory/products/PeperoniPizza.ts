@@ -1,4 +1,4 @@
-import {Pizza} from "./pizza.type";
+import {Pizza} from "../interfaces/pizza.type";
 
 export class PeperoniPizza implements Pizza {
     bake(): Pizza {
