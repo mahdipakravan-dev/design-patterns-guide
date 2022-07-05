@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background: rgba(0,0,0,.2);
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+form {
+    margin: 0 auto;
+}
+.clear{
+    clear: both;
+}
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form-row {
+    background-color: rgba(255,255,0,.4);
+    padding: .5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: left;
+}
+
+.radio{
+    margin-left: 1rem;
+}

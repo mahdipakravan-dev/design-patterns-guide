@@ -14,6 +14,7 @@
 * mexican pizza
 * telegramPublisher
 * vipAccount
+* rectangle
 
 بعد از اینکه ساختین تشریف بیارین پایین و جواب رو ببینید
 
@@ -38,5 +39,7 @@
             vip account : vipBoyAccount , vipGirlAccount
             gold account : goldBoyAccount , goldGirlAccount
             etc ...
+        + shape example :
+            rectangle : blueRectangle , redRectangle
         
 ```
