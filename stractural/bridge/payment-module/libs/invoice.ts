@@ -1,12 +1,15 @@
 export class Invoice {
-    private _title : string
-    private _price : number
+    constructor(
+        private _title: string,
+        private _price: number
+    ) {
+    }
 
     get title(): string {
         return this._title;
     }
 
-    set title(title : string) {
+    set title(title: string) {
         this._title = title
     }
 

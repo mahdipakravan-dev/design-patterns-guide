@@ -2,19 +2,17 @@ import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import "./app.css"
-import {ZarinpalProvider} from "./libs/ZarinpalProvider";
-import {MellatProvider} from "./libs/MellatProvider";
-import {SamanProviderAdapter} from "./libs/packages/SamanProvider.adapter";
-import {OnlineGatewayType} from "./libs/OnlineGateway.type";
 import {Invoice} from "./libs/invoice";
-
-const payments = [
-    new ZarinpalProvider(),
-    new MellatProvider(),
-    new SamanProviderAdapter()
-];
+import {OnlinePayment} from "./libs/methods/online-payment";
+import {SamanGatewayHandler} from "./libs/handlers/saman-gateway-handler";
 
 const App = () => {
+
+    const onClick = () => {
+        const invoice = new Invoice("myInvoice" , 2000);
+        const handler = new SamanGatewayHandler();
+        new OnlinePayment(handler);
+    }
 
   return (
     <div className={"container"}>
@@ -23,16 +21,16 @@ const App = () => {
           <h1>Select Your Payment💳</h1>
 
           <div className="grid">
-              {
-                  payments.map(payment => (
-                      <div className="box" onClick={() => {
-                          const invoice = new Invoice(2000 , 300)
-                          payment.startPay(invoice);
-                      }}>
-                          {payment._payment_title}
-                      </div>
-                  ))
-              }
+              {/*{*/}
+              {/*    payments.map(payment => (*/}
+              {/*        <div className="box" onClick={() => {*/}
+              {/*            const invoice = new Invoice("2000" , 300)*/}
+              {/*            payment.startPay(invoice);*/}
+              {/*        }}>*/}
+              {/*            {payment._payment_title}*/}
+              {/*        </div>*/}
+              {/*    ))*/}
+              {/*}*/}
           </div>
       </div>
     </div>
