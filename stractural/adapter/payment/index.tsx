@@ -7,6 +7,8 @@ import {MellatProvider} from "./libs/MellatProvider";
 import {SamanProviderAdapter} from "./libs/packages/SamanProvider.adapter";
 import {OnlineGatewayType} from "./libs/OnlineGateway.type";
 import {Invoice} from "./libs/invoice";
+import {useEffect} from "react";
+import {FlyweightFactory} from "./libs";
 
 const payments = [
     new ZarinpalProvider(),
