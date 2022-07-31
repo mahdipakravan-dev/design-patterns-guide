@@ -1,6 +1,6 @@
-import {ThirdPartyLib} from "./thirdparty.type";
+import {ThirdPartyLib} from "./youtube.type";
 
-export class ThirdpartyCached implements ThirdPartyLib {
+export class CachedProxy implements ThirdPartyLib {
     _cachedDB : Record<string, File> = {}
     constructor(
         private service : ThirdPartyLib

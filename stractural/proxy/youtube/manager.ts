@@ -1,6 +1,6 @@
-import {ThirdPartyLib} from "./thirdparty.type";
-import {ThirdpartyYoutube} from "./thirdparty-youtube";
-import {ThirdpartyCached} from "./thirdparty-cached";
+import {ThirdPartyLib} from "./youtube.type";
+import {YoutubeService} from "./youtube.service";
+import {CachedProxy} from "./cached.proxy";
 
 export class Manager {
     constructor(
@@ -13,6 +13,6 @@ export class Manager {
     reactOnUserInput() {}
 }
 
-const aService = new ThirdpartyYoutube();
-const aProxy = new ThirdpartyCached(aService);
+const aService = new YoutubeService();
+const aProxy = new CachedProxy(aService);
 const manager = new Manager(aProxy);
