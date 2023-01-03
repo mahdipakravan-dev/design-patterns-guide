@@ -7,23 +7,23 @@ let's see the repository .
 
 here is table of content and state of design-patterns
 
-| Symbol | Meaning               |
-| ------ | --------------------- |
-| ✅     | SOLID Principles        |
-| ✅     | [ChainOfResponsibility](https://https://github.com/mahdipakravan-dev/design-patterns-guide/) |
-| ✅     | command                 |
-| ✅     | observer                |
-| ✅     | state                   |
-| ✅     | strategy                |
-| ✅     | template-method         |
-| ✅     | abstract-factory        |
-| ✅     | builder                 |
-| ✅     | factory                 |
-| ✅     | singleton               |
-| ✅     | adapter                 |
-| ✅     | bridge                  |
-| ✅     | composite               |
-| ✅     | decorator               |
-| ✅     | facade                  |
-| ✅     | fly-weight              |
-| ✅     | proxy                   |
+| Example in TS |  Example in React | Guide  | Meaning               |
+| ------  | ------ | --------------------- |
+| ✅     | ✅     | ✅     | SOLID Principles        |
+| ✅     | ✅     | ✅     | [ChainOfResponsibility](https://https://github.com/mahdipakravan-dev/design-patterns-guide/) |
+| ✅     | ✅     | ✅     | command                 |
+| ✅     | ✅     | ✅     | observer                |
+| ✅     | ✅     | ✅     | state                   |
+| ✅     | ✅     | ✅     | strategy                |
+| ✅     | ✅     | ✅     | template-method         |
+| ✅     | ✅     | ✅     | abstract-factory        |
+| ✅     | ✅     | ✅     | builder                 |
+| ✅     | ✅     | ✅     | factory                 |
+| ✅     | ✅     | ✅     | singleton               |
+| ✅     | ✅     | ✅     | adapter                 |
+| ✅     | ✅     | ✅     | bridge                  |
+| ✅     | ✅     | ✅     | composite               |
+| ✅     | ✅     | ✅     | decorator               |
+| ✅     | ✅     | ✅     | facade                  |
+| ✅     | ✅     | ✅     | fly-weight              |
+| ✅     | ✅     | ✅     | proxy                   |
