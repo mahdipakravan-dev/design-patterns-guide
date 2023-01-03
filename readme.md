@@ -10,7 +10,7 @@ here is table of content and state of design-patterns
 | Symbol | Meaning               |
 | ------ | --------------------- |
 | ✅     | SOLID Principles        |
-| ✅     | chain-of-responsibility |
+| ✅     | [ChainOfResponsibility](https://https://github.com/mahdipakravan-dev/design-patterns-guide/) |
 | ✅     | command                 |
 | ✅     | observer                |
 | ✅     | state                   |
