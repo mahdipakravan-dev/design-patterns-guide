@@ -1,12 +1,18 @@
 #Chain Of Responsibility (CoR)
 lets you pass requests along a chain of handlers.
 
-> یک سری هندلر هستن که درخواست از بین اونها رد میشه !
+>Your requests will be passed through a series of handlers !
 
-##کی استفاده کنیم
+```
+  🔗Chain1.Handler(Request) => 🔗Chain2.Handler(Request) => 🔗Chain3.Handler(Request) => Chain3.Handler(Request)
+```
 
-> when we have different kind of request
+## when use chainOfResponsibility ?
 
-> وقتی ترتیب اجرا شدن هندلر ها اهمیت داره 
+> When we have different kind of request
 
-> میتونیم ترتیب اونها رو در رانتایم عوض کنیم
+> When the order of execution matters
+
+> We can change their order in runtime
+
+
