@@ -5,7 +5,7 @@ let's see the repository .
 
 ## Document 🗒
 
-here is table of content and state of design-patterns
+here is table of content and state of design -patterns
 
 | Example in TS |  Example in React | Guide (En,Fa)  | Meaning                 |
 | ------------  | ----------------- | ------ | ----------------------- |
